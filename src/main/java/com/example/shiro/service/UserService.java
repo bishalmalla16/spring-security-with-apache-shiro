@@ -9,6 +9,7 @@ import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -21,6 +22,10 @@ public class UserService {
 
     @Autowired
     private RoleRepository roleRepository;
+
+    public List<User> findAllUsers(){
+        return userRepository.findAll();
+    }
 
     public User findById(int id){
         return userRepository.findById(id).orElse(null);
@@ -37,6 +42,12 @@ public class UserService {
     public void updateUser(User user){
         if(userRepository.findById(user.getId()).isPresent()) {
             userRepository.save(user);
+        }
+    }
+
+    public void deleteUser (int id){
+        if(userRepository.findById(id).isPresent()) {
+            userRepository.deleteById(id);
         }
     }
 }

@@ -15,6 +15,10 @@
         <c:out value="${subject.principal}"/> <a href="/logout"><button>Logout</button></a> </shiro:user>
     </h1>
 
+    <shiro:hasRole name="Administration">
+        <a href="${pageContext.request.contextPath}/users">User List</a>
+    </shiro:hasRole>
+
     <shiro:authenticated>
         <a href="${pageContext.request.contextPath}/account-info"><button>Account Info</button></a>
     </shiro:authenticated>

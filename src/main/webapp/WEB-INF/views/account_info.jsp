@@ -20,20 +20,44 @@
         <shiro:lacksRole name="User">User Role</shiro:lacksRole>
     </div>
 
-    <p>
-        You can
-        <shiro:lacksPermission name="book:read">
-            NOT
-        </shiro:lacksPermission>
-        read a book here.
-    </p>
-    <p>
-        You can
-        <shiro:lacksPermission name="book:write">
-            NOT
-        </shiro:lacksPermission>
-        write a book here.
-    </p>
+    <div>
+        <h3>List of Permissions: </h3>
+        <p>
+            You can
+            <shiro:lacksPermission name="book:read">
+                NOT
+            </shiro:lacksPermission>
+            read a book here.
+        </p>
+        <p>
+            You can
+            <shiro:lacksPermission name="book:write">
+                NOT
+            </shiro:lacksPermission>
+            write a book here.
+        </p>
+        <p>
+            You can
+            <shiro:lacksPermission name="user:view">
+                NOT
+            </shiro:lacksPermission>
+            view a user here.
+        </p>
+        <p>
+            You can
+            <shiro:lacksPermission name="user:update">
+                NOT
+            </shiro:lacksPermission>
+            update a user here.
+        </p>
+        <p>
+            You can
+            <shiro:lacksPermission name="user:delete">
+                NOT
+            </shiro:lacksPermission>
+            delete a user here.
+        </p>
+    </div>
 
     <a href="<c:url value="/"/>"><button>Back to Home Page</button></a>
     <br/>

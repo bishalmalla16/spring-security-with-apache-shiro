@@ -22,6 +22,8 @@
     </c:forEach>
 <%--    <form:checkboxes path="roles" items="${roleList}"/> <br/>--%>
     <input type="submit" value="Update">
+    
 </form:form>
+<a href="${pageContext.request.contextPath}/users"><button>Cancel</button></a>
 </body>
 </html>

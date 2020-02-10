@@ -13,6 +13,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 @Configuration
 @SpringBootApplication
@@ -53,7 +56,13 @@ public class ShiroSecuritySpringBootApplication {
 		chainDefinition.addPathDefinition("/login", "authc");
 		chainDefinition.addPathDefinition("/logout", "logout");
 		chainDefinition.addPathDefinition("/account-info", "authc, multipleRoles[Administration, User]");
-		chainDefinition.addPathDefinition("/update", "authc, roles[Administration]");
+
+		Map<String, String> pathDefinitions = new HashMap<>();
+		pathDefinitions.put("/update", "authc, roles[Administration]");
+		pathDefinitions.put("/delete", "authc, roles[Administration]");
+		pathDefinitions.put("/users", "authc, roles[Administration]");
+		chainDefinition.addPathDefinitions(pathDefinitions);
+
 		return chainDefinition;
 	}
 
