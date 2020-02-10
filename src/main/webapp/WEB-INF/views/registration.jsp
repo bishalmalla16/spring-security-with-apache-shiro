@@ -14,5 +14,7 @@
         <br/>
         <input type="submit" value="Submit">
     </form:form>
+    <a href="${pageContext.request.contextPath}/login"><button>Back</button></a><br/>
+
 </body>
 </html>

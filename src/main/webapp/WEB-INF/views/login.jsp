@@ -13,5 +13,8 @@
         <br>
         <input type="submit" value="Login">
     </form>
+    <a href="${pageContext.request.contextPath}/"><button>Back</button></a><br/>
+    <a href="${pageContext.request.contextPath}/register">Don't have an account! Register Here</a>
+
 </body>
 </html>

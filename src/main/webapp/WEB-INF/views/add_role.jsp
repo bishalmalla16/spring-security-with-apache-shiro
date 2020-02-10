@@ -12,7 +12,7 @@
     <br/>
 
     <form:label path="permission">Permissions: </form:label>
-    <form:checkbox path="permission" value="user:read"/>user:read
+    <form:checkbox path="permission" value="user:view"/>user:view
     <form:checkbox path="permission" value="user:*"/>user:*
     <form:checkbox path="permission" value="book:read"/>book:read
     <form:checkbox path="permission" value="book:*"/>book:*
@@ -20,5 +20,7 @@
 
     <input type="submit" value="Submit">
 </form:form>
+<a href="${pageContext.request.contextPath}/users"><button>Cancel</button></a><br/>
+
 </body>
 </html>

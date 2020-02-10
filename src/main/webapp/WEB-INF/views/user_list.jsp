@@ -5,6 +5,8 @@
     <title>List of Users</title>
 </head>
 <body>
+    <a href="${pageContext.request.contextPath}/register-role"><button>Add Role</button></a>
+    <br/>
     <table border="1">
         <thead>
             <tr>

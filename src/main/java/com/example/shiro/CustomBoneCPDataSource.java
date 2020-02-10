@@ -9,7 +9,8 @@ public class CustomBoneCPDataSource extends BoneCPDataSource {
         this.setDriverClass("com.mysql.cj.jdbc.Driver");
         this.setJdbcUrl("jdbc:mysql://localhost:3306/shiro?useTimezone=true&serverTimezone=UTC");
         this.setUsername("root");
-        this.setMaxConnectionsPerPartition(10);
+        this.setPartitionCount(8);
+        this.setMaxConnectionsPerPartition(4);
     }
 
     public CustomBoneCPDataSource(BoneCPConfig config) {
